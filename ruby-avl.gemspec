@@ -2,7 +2,7 @@ require File.expand_path('../lib/ruby-avl/version', __FILE__)
 
 Gem::Specification.new do |s|
   s.name          = 'ruby-avl'
-  s.version       = AVL::VERSION
+  s.version       = AVLTree::VERSION
   s.date          = '2016-04-30'
   s.description   = s.summary = 'A simple AVL Tree implemented in Ruby'
   s.authors       = ['Daniel Byers']
