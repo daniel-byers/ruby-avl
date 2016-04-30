@@ -1,4 +1,4 @@
-module BSTreeTraversal
+module AVLTree
   class BSTreeTraversal
 
     def pre_order_array(root_node, attribute = nil)

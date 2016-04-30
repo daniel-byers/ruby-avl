@@ -1,3 +1,3 @@
-module AVL
-	VERSION = '0.0'
+module AVLTree
+	VERSION = '0.1'
 end

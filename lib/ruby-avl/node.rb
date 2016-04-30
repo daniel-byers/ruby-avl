@@ -1,4 +1,4 @@
-module Node
+module AVLTree
 	class Node
 	  attr_accessor :data, :left, :right
 

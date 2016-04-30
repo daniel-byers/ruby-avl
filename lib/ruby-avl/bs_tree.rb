@@ -1,4 +1,4 @@
-module BSTree  
+module AVLTree  
   class BSTree
 
     attr_reader :root
