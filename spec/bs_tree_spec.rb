@@ -2,15 +2,15 @@ require File.expand_path(File.join(File.dirname(__FILE__), 'spec_helper'))
 
 Given.use_natural_assertions
 
-describe BSTree::BSTree do
-  Given(:node) { Node::Node.new(1) }
+describe AVLTree::BSTree do
+  Given(:node) { AVLTree::Node.new(1) }
 
   context 'initialize a BS Tree with a null root' do
     Then { subject.root == nil }
   end
 
   context 'initialize a BS Tree with a root node' do
-    Given(:subject) { BSTree::BSTree.new(node) }
+    Given(:subject) { AVLTree::BSTree.new(node) }
     Then { subject.root == node }
   end
 

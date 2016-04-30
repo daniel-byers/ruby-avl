@@ -3,7 +3,7 @@ require File.expand_path(File.join(File.dirname(__FILE__), 'spec_helper'))
 Given.use_natural_assertions
 
 describe AVLTree::AVLTree do
-    Given(:node) { Node::Node.new(25) }
+    Given(:node) { AVLTree::Node.new(25) }
 
   context 'initialize a AVL Tree with a null root' do
     Then { subject.root == nil }

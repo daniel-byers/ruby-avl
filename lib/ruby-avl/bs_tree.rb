@@ -40,7 +40,7 @@ module AVLTree
     # raised to inform the user of duplication.
     def add_to_tree(item, node)
       if node.nil?
-        return Node::Node.new(item)
+        return Node.new(item)
       elsif compare(item, node.data) < 0
         node.left = add_to_tree(item, node.left)
       elsif compare(item, node.data) > 0

@@ -2,7 +2,7 @@ require File.expand_path(File.join(File.dirname(__FILE__), 'spec_helper'))
 
 Given.use_natural_assertions
 
-describe BSTreeTraversal::BSTreeTraversal do
+describe AVLTree::BSTreeTraversal do
   # Given returns the last node of the AVL Tree instead of the tree object itself.
   # In production, avl_tree.root would need to be passed into the traversal methods.
   Given(:avl_tree) {

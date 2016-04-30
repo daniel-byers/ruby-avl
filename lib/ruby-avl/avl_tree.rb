@@ -1,6 +1,6 @@
 require_relative 'bs_tree'
 module AVLTree
-  class AVLTree < BSTree::BSTree
+  class AVLTree < BSTree
 
     # Public interfaces implemented in superclass
 
