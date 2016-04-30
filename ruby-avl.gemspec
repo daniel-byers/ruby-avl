@@ -1,12 +1,20 @@
+require File.expand_path('../lib/ruby-avl/version', __FILE__)
+
 Gem::Specification.new do |s|
-  s.name        = 'ruby-avl'
-  s.version     = '0.0'
-  s.date        = '2016-04-30'
-  s.summary     = 'A simple AVL Tree implemented in Ruby'
-  s.description = 'An AVL Tree is a self-balancing binary search tree used for fast storage and retrieval of data'
-  s.authors     = ['Daniel Byers']
-  s.email       = 'daniel_byers@hotmail.co.uk'
-  s.files       = ['lib/ruby-avl.rb', 'lib/ruby-avl/*.rb']
-  s.homepage    = 'http://rubygems.org/gems/ruby-avl'
-  s.license     = 'MIT'
+  s.name          = 'ruby-avl'
+  s.version       = AVL::VERSION
+  s.date          = '2016-04-30'
+  s.description   = s.summary = 'A simple AVL Tree implemented in Ruby'
+  s.authors       = ['Daniel Byers']
+  s.email         = 'daniel_byers@hotmail.co.uk'
+  s.homepage      = 'http://rubygems.org/gems/ruby-avl'
+  s.license       = 'MIT'
+
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test}/*`.split("\n")
+  s.require_path  = 'lib'
+
+  s.add_development_dependency 'rake', '~> 0'
+  s.add_development_dependency 'rspec', '~> 0'
+  s.add_development_dependency 'rspec/given', '~> 0'
 end
