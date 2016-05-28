@@ -7,6 +7,7 @@ An implementation of the Adelson-Velsky and Landis self-balancing binary search 
 ## Usage
 
 To use the AVL Tree is simple, first just initialise it:
+
     avl_tree = AVLTree::AVLTree.new
 
 Then add the data:
