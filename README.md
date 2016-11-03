@@ -6,9 +6,23 @@ An implementation of the Adelson-Velsky and Landis self-balancing binary search 
 
 ## Usage
 
-To use the AVL Tree is simple, first just initialise it:
+To use the AVL Tree is simple, first initialise it:
 
     avl_tree = AVLTree::AVLTree.new
+
+The AVL Tree allows any object to be placed into a Node. However, comparison of the objects needs to be done on an attribute, otherwise the tree won't be able to judge which sub-tree to put the object in. This is done easily by implementing the method #compare_to on your object:
+
+    class Person
+      attr_accessor :name
+
+      def compare_to(other_person)
+        this.name <=> other_person.name
+      end
+    end
+
+In the above example, a Person object can be added to the tree and it will be balanced on the lexicographical comparison of their name with another Person object. This allows you to have more complex trees.
+
+If you just want to build a tree from simple data types (FixNum, String, etc.) that can already be compared. You don't need to implement this method.
 
 Then add the data:
 
@@ -19,6 +33,8 @@ Then add the data:
 Remove data if necessary:
 
     avl_tree.remove_item(3)
+
+***
 
 To traverse the tree and print out the information, use one of the traversals. Pass in the root of the AVL Tree as the first parameter:
 
