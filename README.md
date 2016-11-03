@@ -18,7 +18,7 @@ The AVL Tree allows any object to be placed into a Node. However, comparison of 
 
 In the above example, a Person object can be added to the tree and it will be balanced on the lexicographical comparison of their name with another Person object's name attribute. This allows you to have more complex trees.
 
-If you just want to build a tree from simple data types (FixNum, String, etc.) that can already be compared. You don't need to implement this method.
+If you just want to build a tree from simple data types (Fixnum, String, etc.) that can already be compared. You don't need to implement this method.
 
 ***
 
@@ -38,12 +38,20 @@ Remove data if necessary:
 
 ***
 
-To traverse the tree and print out the information, use one of the traversals. Pass in the root of the AVL Tree as the first parameter:
+To traverse the tree and return the structural information: use one of the traversals. Pass in the root of the AVL Tree as the first parameter. This will return a string representing the nodes in the tree:
 
     AVLTree::BSTreeTraversal.new.pre_order_string(avl_tree.root)
     AVLTree::BSTreeTraversal.new.in_order_string(avl_tree.root)
     AVLTree::BSTreeTraversal.new.post_order_string(avl_tree.root)
 
-This will print out the data in the tree. An optional parameter can be passed into this function to print out an attribute of the data in the node, instead of the node itself:
+This will return an Array with each element representing a node in the tree:
+
+    AVLTree::BSTreeTraversal.new.pre_order_array(avl_tree.root)
+    AVLTree::BSTreeTraversal.new.in_order_array(avl_tree.root)
+    AVLTree::BSTreeTraversal.new.post_order_array(avl_tree.root)
+
+
+An optional parameter can be passed into this function to print out an attribute of the data in the node, instead of the node itself. Obviously, the attribute needs to exist on the object:
 
     AVLTree::BSTreeTraversal.new.pre_order_string(avl_tree.root, :name)
+    AVLTree::BSTreeTraversal.new.pre_order_array(avl_tree.root, :name)
